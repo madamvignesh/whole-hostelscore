@@ -1,0 +1,17 @@
+.login-container {
+    height: calc(100vh - 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f9fc;
+  }
+  
+  .register-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  

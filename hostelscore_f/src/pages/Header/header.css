@@ -1,0 +1,150 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 50;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 1rem;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .nav-desktop {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .nav-link.active,
+  .nav-link:hover {
+    color: #111;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .auth-links {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .ghost-btn, .solid-btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .ghost-btn {
+    background: transparent;
+    color: #333;
+  }
+  
+  .solid-btn {
+    background: #000;
+    color: #fff;
+  }
+  
+  .icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black; /* Set the text/icon color to black */
+  }
+  
+  .icon-btn:hover {
+    color: #333; /* Optional: Darker shade on hover */
+  }
+  
+  .user-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 2.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 180px;
+    padding: 0.5rem;
+  }
+  
+  .user-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+  }
+  
+  .logout {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: red;
+  }
+  
+  .mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-desktop {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  }
+
+.user-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .user-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #ccc; /* Placeholder color for the avatar */
+  }

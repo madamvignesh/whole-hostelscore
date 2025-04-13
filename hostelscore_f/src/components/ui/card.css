@@ -1,0 +1,20 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background: white;
+  }
+  .card-header {
+    margin-bottom: 0.5rem;
+  }
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .card-description {
+    color: gray;
+  }
+  .card-content {
+    margin-top: 1rem;
+  }
+  
