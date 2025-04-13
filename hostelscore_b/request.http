@@ -1,0 +1,112 @@
+### POST Request - Login
+POST http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "maruthi",
+    "password": "maruthi66"
+}
+
+###
+
+### POST Request - Register a New User
+POST http://localhost:3000/api/auth/register/user
+Content-Type: application/json
+
+{
+    "username": "maruthi",
+    "name": "Maruthi",
+    "password": "maruthi66",
+    "gender": "Male",
+    "age": 21
+}
+
+###
+
+### POST Request - Register a New Hostel
+POST http://localhost:3001/api/auth/register/hostel
+Content-Type: application/json
+
+{
+    "name": "Hyderabad Hostel",
+    "address": "145 old city",
+    "price": 1050,
+    "username": "hyderabadhostel",
+    "password": "hyderabad123"
+}
+
+###
+
+### POST Request - Register a New Admin
+POST http://localhost:3000/api/auth/register/admin
+Content-Type: application/json
+
+{
+    "username": "varshini",
+    "password": "varshini123",
+    "name": "K Varshini",
+    "contact_no": "8523697410"
+}
+
+### GET Request - Get all liked data (admin only)
+GET http://localhost:3001/api/liked
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiY2JkNzBhNDAtNmQwZi00ODQwLWI1M2MtNDIxYjgyNGJkYzg3IiwidXNlcl90eXBlIjoiQWRtaW4iLCJpYXQiOjE3NDQ1Mjk3OTQsImV4cCI6MTc0NDUzMzM5NH0.eNLVpQlRK4HPz9-Yno0w2kp4pVqD90qJknnZCrY6LpI
+Content-Type: application/json
+
+###
+
+### POST Request - User likes a hostel
+POST http://localhost:3001/api/liked/10000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiNDEyZGM0OGItYzFlMi00ZDE2LThlZDYtNzAxNWQ1YmUzM2Y0IiwidXNlcl90eXBlIjoiQ3VzdG9tZXIiLCJpYXQiOjE3NDQ1MjMxNTIsImV4cCI6MTc0NDUyNjc1Mn0.VTY92vew1q0ZGGe3Ut2OYMPao9G-bOqe3jERalVn1qk
+Content-Type: application/json
+
+{
+    "liked_rating": 4.0
+}
+
+###
+
+### PUT Request - Update user liked rating for a hostel
+PUT http://localhost:3000/api/liked/10000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiYjE2NDkyMmQtZTdmMC00MjFlLWIzZjMtMTUzZDhlMDQ0NzA0IiwidXNlcl90eXBlIjoiQ3VzdG9tZXIiLCJpYXQiOjE3NDQzNzc5OTcsImV4cCI6MTc0NDM4MTU5N30.xjBEWNFYnoPnpfmfrJEY9vqZyb7SNDQxgWGWXOMQfsk
+Content-Type: application/json
+
+{
+    "liked_rating": 5.0
+}
+
+### PUT Request - Change Password
+PUT http://localhost:3000/api/change_password
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiNzRkMDRkYjktOWI3OS00NTNhLTk1MGQtMGJiMDY4YTg4MzI3IiwidXNlcl90eXBlIjoiQWRtaW4iLCJpYXQiOjE3NDQzODEyMDAsImV4cCI6MTc0NDM4NDgwMH0.hMSt_OSfpmF-SjFcAd73IQ3OxtORmoVfaF8WUosD3hs
+Content-Type: application/json
+
+{
+    "old_password": "varshini123",
+    "new_password": "varshini1234"
+}
+
+### GET Request - Get All Hostels
+GET http://localhost:3001/api/hostels?input_search=
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiY2JkNzBhNDAtNmQwZi00ODQwLWI1M2MtNDIxYjgyNGJkYzg3IiwidXNlcl90eXBlIjoiQWRtaW4iLCJpYXQiOjE3NDQ1Mjk3OTQsImV4cCI6MTc0NDUzMzM5NH0.eNLVpQlRK4HPz9-Yno0w2kp4pVqD90qJknnZCrY6LpI
+Content-Type: application/json
+
+###
+
+### GET Request - Get Hostel by ID
+GET http://localhost:3001/api/hostels/10000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiNzRkMDRkYjktOWI3OS00NTNhLTk1MGQtMGJiMDY4YTg4MzI3IiwidXNlcl90eXBlIjoiQWRtaW4iLCJpYXQiOjE3NDQ1MTY0NDUsImV4cCI6MTc0NDUyMDA0NX0.1nKvTtDAsw_YOUKalzNlvmZ7mAMkpcWSMI-5Meq1lGE
+Content-Type: application/json
+
+###
+
+### GET Request - Get All Customers (Admin only)
+GET http://localhost:3001/api/customers?input_search=
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiY2JkNzBhNDAtNmQwZi00ODQwLWI1M2MtNDIxYjgyNGJkYzg3IiwidXNlcl90eXBlIjoiQWRtaW4iLCJpYXQiOjE3NDQ1Mjk3OTQsImV4cCI6MTc0NDUzMzM5NH0.eNLVpQlRK4HPz9-Yno0w2kp4pVqD90qJknnZCrY6LpI
+Content-Type: application/json
+
+###
+
+### GET Request - Get likes by Hostel ID
+GET http://localhost:3001/api/hostellikes/10000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXJyZW50X2lkIjoiNzRkMDRkYjktOWI3OS00NTNhLTk1MGQtMGJiMDY4YTg4MzI3IiwidXNlcl90eXBlIjoiQWRtaW4iLCJpYXQiOjE3NDQ1MjAzMDYsImV4cCI6MTc0NDUyMzkwNn0.NYhUUBnYqGz-krTrjRKD7ZY28QzsAT7As8xOxvYloVU
+Content-Type: application/json
